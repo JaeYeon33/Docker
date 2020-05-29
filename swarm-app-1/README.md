@@ -10,7 +10,7 @@ Here is a basic diagram of how the 5 services will work:
 
 ### Services (names below should be service names)
 - vote
-    - bretfisher/examplevotingapp_vote
+    - dockersamples/examplevotingapp_vote
     - web front end for users to vote dog/cat
     - ideally published on TCP 80. Container listens on 80
     - on frontend network
@@ -24,7 +24,7 @@ Here is a basic diagram of how the 5 services will work:
     - 1 replica NOTE VIDEO SAYS TWO BUT ONLY ONE NEEDED
 
 - worker
-    - bretfisher/examplevotingapp_worker:java
+    - dockersamples/examplevotingapp_worker:java
     - backend processor of redis and storing results in postgres
     - no public ports
     - on frontend and backend networks
@@ -38,7 +38,7 @@ Here is a basic diagram of how the 5 services will work:
     - remember set env for password-less connections -e POSTGRES_HOST_AUTH_METHOD=trust
 
 - result
-    - bretfisher/examplevotingapp_result
+    - dockersamples/examplevotingapp_result
     - web app that shows results
     - runs on high port since just for admins (lets imagine)
     - so run on a high port of your choosing (I choose 5001), container listens on 80
