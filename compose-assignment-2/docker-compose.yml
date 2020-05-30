@@ -26,4 +26,5 @@ volumes:
   
 secrets:
   psql-pw:
-    external: true
+    external: true  
+
